@@ -8,6 +8,10 @@ public class LinkedList<T>
     {
         Node newNode= new Node(data);
         newNode.setNextnode(head);
+        //newNode.setPrevieousNode(head.getPrevieousNode());
+        if (head!=null) {
+            head.setPrevieousNode(newNode);
+        }
         head=newNode;
     }
     public int length()
